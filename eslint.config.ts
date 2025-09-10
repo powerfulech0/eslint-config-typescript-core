@@ -1,45 +1,18 @@
 // @ts-check
 
 import eslint from '@eslint/js';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import eslintPluginReact from 'eslint-plugin-react';
-import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
-
+import prettier from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
-
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig(
   eslint.configs.recommended,
-  eslintPluginPrettierRecommended,
-  eslintPluginReactHooks.configs['recommended-latest'],
+  prettier,
   tseslint.configs.recommended,
   tseslint.configs.stylistic,
   {
     ignores: ['node_modules/', 'dist/'],
-  },
-  {
-    files: ['*.ts', '*.tsx'],
-    plugins: {
-      react: eslintPluginReact,
-    },
-    rules: {
-      'react/jsx-curly-brace-presence': [
-        'error',
-        { props: 'never', children: 'never' },
-      ],
-    },
-  },
-  {
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-  },
-  {
+    files: ['*.ts'],
     rules: {
       // Keep the rules alphabetized
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
@@ -92,7 +65,6 @@ export default defineConfig(
       'no-use-before-define': 'error',
       'prefer-object-spread': 'error',
       'prefer-template': 'error',
-      'react-hooks/exhaustive-deps': 'error',
     },
   },
 );
