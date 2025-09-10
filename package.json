@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-typescript-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Core ESLint and Prettier configuration for TypeScript projects.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -27,5 +27,8 @@
   "scripts": {
     "build": "rollup -c",
     "prepare": "bun run build"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
