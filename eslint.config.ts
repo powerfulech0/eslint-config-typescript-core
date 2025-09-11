@@ -12,7 +12,7 @@ export default defineConfig(
   tseslint.configs.stylistic,
   {
     ignores: ['node_modules/', 'dist/'],
-    files: ['*.ts'],
+    files: ['**/*.ts'],
     rules: {
       // Keep the rules alphabetized
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
