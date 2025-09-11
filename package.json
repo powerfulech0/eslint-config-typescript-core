@@ -4,6 +4,7 @@
   "description": "Core ESLint and Prettier configuration for TypeScript projects.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "exports": {
     "require": "./dist/cjs/index.js",
     "import": "./dist/esm/index.js"
@@ -20,7 +21,8 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.4",
     "jiti": "^2.5.1",
-    "rollup": "^4.50.1"
+    "rollup": "^4.50.1",
+    "rollup-plugin-dts": "^6.2.3"
   },
   "peerDependencies": {
     "eslint": "^9.35.0",
