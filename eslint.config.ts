@@ -1,13 +1,13 @@
 // @ts-check
 
 import eslint from '@eslint/js';
-import prettier from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
 import { defineConfig } from 'eslint/config';
 
+// import prettier from 'eslint-plugin-prettier/recommended';
+
 export default defineConfig(
   eslint.configs.recommended,
-  prettier,
   tseslint.configs.recommended,
   tseslint.configs.stylistic,
   {
@@ -17,7 +17,6 @@ export default defineConfig(
       // Keep the rules alphabetized
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/member-delimiter-style': 'off',
       '@typescript-eslint/naming-convention': [
         'error',
         {
@@ -39,7 +38,6 @@ export default defineConfig(
         'error',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
-      '@typescript-eslint/space-before-function-paren': 'off',
       'array-bracket-spacing': 'error',
       'array-callback-return': 'error',
       eqeqeq: ['error', 'always'],
