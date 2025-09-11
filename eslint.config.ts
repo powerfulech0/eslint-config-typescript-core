@@ -3,11 +3,11 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import { defineConfig } from 'eslint/config';
-
-// import prettier from 'eslint-plugin-prettier/recommended';
+import prettier from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig(
   eslint.configs.recommended,
+  prettier,
   tseslint.configs.recommended,
   tseslint.configs.stylistic,
   {
