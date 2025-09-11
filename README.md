@@ -5,7 +5,7 @@ Make sure to paste the `.prettierrc` file in.
 
 ## Basic Usage
 ```
-import eslintConfig from './eslint.config';
+import eslintConfig from 'eslint-config-typescript-core';
 
 export default eslintConfig;
 ```
