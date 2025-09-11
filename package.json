@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-typescript-core",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Core ESLint and Prettier configuration for TypeScript projects.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
